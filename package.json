@@ -1,0 +1,26 @@
+{
+  "name": "dcs-autenticacao-service",
+  "version": "1.0.0",
+  "description": "Serviço de autenticação para o app academico da cadeira de dcs",
+  "main": "\u001b[D\u001b[D\u001b[D\u001bapp\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senac-dcs/dcs-autenticacao-service.git"
+  },
+  "author": "Lucas Lacerda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senac-dcs/dcs-autenticacao-service/issues"
+  },
+  "homepage": "https://github.com/senac-dcs/dcs-autenticacao-service#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
