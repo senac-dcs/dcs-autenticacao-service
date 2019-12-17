@@ -9,7 +9,7 @@ exports.verificaToken = async (req, res, next) => {
     else {
         let usuarioDecoded;
         try {
-            usuarioDecoded = jwt.verify(token, process.env.SECRET);
+            usuarioDecoded = await jwt.verify(token, process.env.SECRET);
             usuarioEncontrato = await Usuario.findById({ _id: ObjectId(usuarioDecoded.id) });
 
             if(usuarioEncontrato.role == "admin") {

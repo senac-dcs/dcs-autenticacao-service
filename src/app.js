@@ -10,7 +10,7 @@ app.use(morgan('combined'));
 
 var port = process.env.PORT || 3001;
 
-const usuarioDB = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST_REMOTE}/usuarios`;
+const usuarioDB = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST_REMOTE}`;
 const localDB = `mongodb://${process.env.DB_HOST_LOCAL}:${process.env.DB_PORT_LOCAL}/usuarios`;
 
 mongoose.connect(usuarioDB, 
@@ -25,6 +25,10 @@ app.use(bodyParser.json());
 
 app.use('/autenticacao', autenticacaoRoute)
 app.use('/usuarios', usuarioRoute)
+app.get('/', (req, res, next) => {
+    res.send("hello");
+});
+
 
 app.listen(port, () => {
     console.log(`Listen to port ${port}`)
