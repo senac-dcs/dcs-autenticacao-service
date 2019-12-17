@@ -11,8 +11,9 @@ const Usuario = mongoose.Schema({
         required: true
     },
     role: {
-        enum: ['professor','aluno'],
-        required: true
+        type: String,
+        enum: ['professor','aluno', 'admin'],
+        default: 'admin'
     }
 });
 
